@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <h1>Kiadchaiwat Kanyathep</h1>
+    <table style="width:100%">
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>Centro comercial Moctezuma</td>
+          <td>Francisco Chang</td>
+          <td>Mexico</td>
+        </tr>
+      </table>
+    <h2>กรุณากรอกคะแนนของคุณ</h2>
+    <input type="text" id="name">
+    <button onclick="checkinput()">SUBMIT</button>
+    <p id="demo"></p>
+</body>
+<script>
+    function checkinput(){
+        var input = document.getElementById("name").value;
+        if (input === "100"){
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ" + input + "คุณได้เกรต A";
+        } else if (input >= "80"){
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ" + input + "คุณได้เกรต A";
+        } else if (input >= "75") {
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ" + input + "คุณได้เกรต B+";
+        } else if (input >= "70"){
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ" + input + "คุณได้เกรต B";
+        } else if (input >= "65"){
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ" + input + "คุณได้เกรต C+";
+        } else if (input >= "60"){
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ" + input + "คุณได้เกรต C";
+        } else if (input >= "55"){
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ" + input + "คุณได้เกรต D+";
+        } else if (input >= "50"){
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ" + input + "คุณได้เกรต D";
+        } else if (input == "0"){
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ" + input + "คุณได้เกรต E";
+        } else {
+            document.getElementById("demo").innerHTML = "ไม่มีข้อมูล" ;
+        }
+    }
+</script>
+</html>
